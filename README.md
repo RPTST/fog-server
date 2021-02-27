@@ -28,3 +28,9 @@ sh -c "/bin/sed -i '/HOST/ s/\".*\"/\"192.168.2.3\"/g' /var/www/fog/lib/fog/conf
 ```
 
 else, leave these lines alone.
+
+
+##create:
+        sudo docker build --network mynet -t fog-server .
+##run:
+        sudo docker run -d --network mynet -P fog-server
