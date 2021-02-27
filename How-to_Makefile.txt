@@ -1,0 +1,4 @@
+create:
+        sudo docker build --network mynet -t fog-server .
+run:
+        sudo docker run -d --network mynet -P fog-server

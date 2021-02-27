@@ -1,0 +1,15 @@
+# Dockerfile for building fogproject server image for Debian 9 (stretch), with all additional software needed.
+#
+# Version  0.4
+FROM debian-fog:stretch
+
+MAINTAINER Edward Benditt <ebenditt1@gmail.com>
+
+RUN apt update && \
+    apt upgrade -y
+
+EXPOSE 21 22 111 2049 8083 44383 69/udp
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD /usr/sbin/apachectl -D FOREGROUND
