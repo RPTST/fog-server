@@ -1,5 +1,5 @@
 # fog-server
-fog-server for arm64
+fog-server Docker image for arm64
 
 ## In the file [Dockerfile](Dockerfile):
 We are simply updating the server.
