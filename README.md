@@ -29,6 +29,8 @@ sh -c "/bin/sed -i '/HOST/ s/\".*\"/\"192.168.2.3\"/g' /var/www/fog/lib/fog/conf
 
 else, leave these lines alone.
 
+## network:
+        sudo docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 -o parent=eth0 mynet
 
 ## create:
         sudo docker build --network mynet -t fog-server .
