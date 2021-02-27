@@ -31,6 +31,7 @@ else, leave these lines alone.
 
 ## network:
         sudo docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 -o parent=eth0 mynet
+replace the subnet and gateway with the approiate network information
 
 ## create:
         sudo docker build --network mynet -t fog-server .
